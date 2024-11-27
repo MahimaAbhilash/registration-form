@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+body{
+margin:0;
+padding:0;
+overflow:hidden;
+}
+.background{
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background-image:url("C:/scopeIndia/images/desktop.jpeg");
+background-size:cover;
+filter: blur(3px);
+z-index:-1;
+}
+ .form-container {
+            position: relative;
+            width: 800px; /* Increased width */
+            margin: 100px auto; /* Center the form vertically and horizontally */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+input[type="text"],input[type="email"],input[type="email"],input[type="password"],input[type="date"],input[type="file"]{
+width:300px;padding:10px;
+margin:10px 0;
+border:2px solid #ccc;
+border-radius:25px;
+transition:border-color 0.3s,box-shadow 0.3s;
+font-size:16px;
+}
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus,input[type="date"]:focus,input[type="file"]:focus
+{
+border-color:gold;
+box-shadow:0 0 5px rgba(102,175,233,0.8);
+outline:none;
+}
+input[type="submit"]{
+text-align:center;
+margin:80px center;
+border-radius:8px;
+box-shadow: 2px 2px 2px grey;
+font-size:16px;
+background-color:rgba(0,128,0,0.8);
+color:white;
+font-weight:strong;
+text-transform:capitalize;
+}
+input[type="submit"]:hover{
+text-align:center;
+margin:80px center;
+padding:10px;
+border-radius:25px;
+box-shadow: 5px 2px 2px green;
+font-size:26px;
+background-color:rgba(0,220,0,0.6);
+color:white;
+font-weight:strong;
+text-transform:capitalize;
+}
+
+
+</style>
+</head>
+<body>
+<div class="background"></div>
+<h1 style="text-align:center; color:white;">Registration</h1>
+ <div class="form-container">
+<form action="registrationdata.html" method="GET">
+<fieldset>
+<legend>Personal Details</legend>
+<label for="full_name">NAME : </label>
+<input type="text" id="full_name" name="full_name" minlength="5" autofocus required>
+<br>
+<br>
+<label>GENDER : </label>
+<label for="male"> MALE</label>
+<input type="radio" name="gender" id="male" value="male" tabindex="2" required/>
+<label for="female">FEMALE</label>
+<input type="radio" name="gender" id="female" value="female"  />
+<label for="others">OTHERS</label>
+<input type="radio" name="gender" id="others" value="others"/>
+<br>
+<label for ="date_of_birth">DATE of BIRTH</label>
+<input type="date" name="date_of_birth" id="date_of_birth" required>
+<br>
+<label for="password">PASSWORD :<label>
+<input type="password" name="password" id="password" tabindex="1"  required/>
+<br>
+
+<br>
+<label for="email_id">EMAIL :<label>
+<input type="email" name="email_id" id="email_id"  required/>
+<br>
+<label for="file_upload">UPLOAD FILE</label>
+<input type="file" name="file_upload" id="file_upload" required/>
+<br>
+<fieldset><legend>COURSE DETAILS</legend>
+<label for="courses">Courses</label>
+<select name="courses" id="courses">
+    <option value="AWS">AWS</option>
+    <option value="canada">HTML</option>
+    <option value="india" selected>India</option>
+    <option value="germany">Germany</option>
+    <option value="australia">Australia</option>
+</select>
+
+</fieldset><br>
+<br>
+<input type="submit" value="click to submit"><br>
+</form>
+ </div>
+</body>
+</html>
+
